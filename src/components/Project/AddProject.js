@@ -78,7 +78,9 @@ class AddProject extends Component {
                                            value={this.state.projectIdentifier}
                                            onChange={this.onChange.bind(this)}
                                     />
-                                    <p>{errors.projectIdentifier}</p>
+                                    {errors.projectName && (
+                                        <div className="invalid-feedback">{errors.projectName} </div>
+                                    )}
                                 </div>
 
                                 <div className="form-group">
@@ -88,7 +90,9 @@ class AddProject extends Component {
                                               value={this.state.description}
                                               onChange={this.onChange.bind(this)}
                                     />
-                                    <p>{errors.description}</p>
+                                    {errors.projectName && (
+                                        <div className="invalid-feedback">{errors.projectName} </div>
+                                    )}
                                 </div>
                                 <h6>Start Date</h6>
                                 <div className="form-group">
