@@ -6,7 +6,7 @@ export const createProject = (project, history) => async dispatch => {
         const res = await axios.post("/api/project", project);
         history.push("/dashboard");
         dispatch({
-            type: GET_PROJECTS,
+            type: GET_ERRORS,
             payload: {}
         });
     } catch (err) {
